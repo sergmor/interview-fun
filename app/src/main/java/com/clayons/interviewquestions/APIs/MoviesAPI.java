@@ -10,6 +10,7 @@ import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Path;
 import retrofit.http.Query;
+import rx.Observable;
 
 public interface MoviesAPI {
 
@@ -19,7 +20,7 @@ public interface MoviesAPI {
             Callback<MoviesWrapper> callback);
 
     @GET("/movie/{id}")
-    void getMovieDetail (
+    void getMovieDetail(
             @Query("api_key") String apiKey,
             @Path("id") String id,
             Callback<MovieDetail> callback
@@ -33,22 +34,27 @@ public interface MoviesAPI {
     );
 
     @GET("/configuration")
-    void getConfiguration (
+    void getConfiguration(
             @Query("api_key") String apiKey,
             Callback<ConfigurationResponse> response
     );
 
     @GET("/movie/{id}/reviews")
-    void getReviews (
+    void getReviews(
             @Query("api_key") String apiKey,
             @Path("id") String id,
             Callback<ReviewsWrapper> response
     );
 
     @GET("/movie/{id}/images")
-    void getImages (
+    void getImages(
             @Query("api_key") String apiKey,
             @Path("id") String movieId,
             Callback<ImagesWrapper> response
+    );
+
+    @GET("/search/autocompleteGeo")
+    Observable<MoviesWrapper> searchRx(
+            @Query("query") String query
     );
 }
