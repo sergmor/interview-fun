@@ -9,15 +9,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A list of person objects is given. Show the data to the user and render that on fragment A. Every other item contains a completely different background color. Ex) first white, second black, third white, etc.
- * Clicking on the "Like" button from the detail page should reflect in the main page with a transparent blue color background
- - must support older devices
- - must be able to present the list in a linear recycler view.
- - clicking on one item should show a fragment with detail page and same info presented on a large layout
- - layout file structure
- - bonus points for using MVP structure.
- - bonus points for fancy animation and page transitions.
- - bonus points for using libraries + dependency injection frameworks
+ * A list of person objects is given.
+ * Show first name, last name, and avatar as a list on MainActivity.
+ * Show all information on DetailActivity.
+ * First name and last name should be editable. add a save button for storing this information.
+ * Create an interface class to store the data in a persistent storage.
+ * Create an interface to sync database with a server.
+ *
+ * Condition:
+ * Alternate the background color for the list on MainActivity - first white, second black, third white, etc.
+ * "Like" button on the detail page should override the background color on the main page with a blue color background.
+ * bonus points for using MVP structure.
+ * bonus points for suggesting/using up-to-date animation and transition effects.
+ * bonus points for using well known libraries.
  */
 public class MainActivity extends AppCompatActivity{
 
