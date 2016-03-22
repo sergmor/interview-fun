@@ -10,11 +10,10 @@ import java.util.List;
 
 /**
  * A list of person objects is given.
- * Show first name, last name, and avatar as a list on MainActivity.
+ * Show first name, last name, and an avatar image as a list on MainActivity.
  * Show all information on DetailActivity.
  * First name and last name should be editable. add a save button for storing this information.
  * Create an interface class to store the data in a persistent storage.
- * Create an interface to sync database with a server.
  *
  * Condition:
  * Alternate the background color for the list on MainActivity - first white, second black, third white, etc.
