@@ -9,14 +9,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Please complete the code below and run on the emulator to show working results. Feel free to consult web sites/ personal projects etc.
  *
- * 1. A list of person objects is given as below
- * - Show first name, last name, and an avatar image as a list on MainActivity.
- * -  Background color for the list on MainActivity should alternate  -  first white, second black, third white, etc.
- * - Show all information on DetailActivity with the ability to edit the first name, last name, age, and phone number
- * - "Like" button on the detail page should change the drawable image from one to the other.
+ * The goal of this exercise is to run a functional application that is architected well. It should show a list of items,
+ * and based on user input, modifying the item. After completing, show the result on the emulator.
+ * Feel free to consult web sites/ personal projects etc.
+ *
+ * Part I. Show a list of people and details.
+ * - Show first name, last name, and an avatar image as a list on as part of the MainActivity.
+ * - Background color of the items of the listshould alternate  -  first white, second black, third white, etc.
+ * - When clicking on an item, all information is displayed on DetailActivity with the ability to edit the first name, last name, age, and phone number
+ * - In addition, create a "Like" button on the detail page - this should change the drawable image from one to the other on the main list.
  * - "Prettify" the layouts so it is user friendly but leave the functionality untouched.
+ *
+ * Part II. show a list of items as a GET API Request to server using any kind of framework you know.
+ * - Discuss how you would display and use the information retrieved from the below endpoint
+ *      http://jsonplaceholder.typicode.com/users
+ * - Discuss how to handle network errors
+ * - Discuss how to model the object
  *
  * <p/>
  * bonus points for:
