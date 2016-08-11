@@ -15,8 +15,7 @@ import java.util.List;
  * Feel free to consult web sites/ personal projects etc.
  *
  * Part I. Show a list of people and details.
- * - Show first name, last name, and an avatar image as a list on as part of the MainActivity.
- * - Background color of the items of the listshould alternate  -  first white, second black, third white, etc.
+ * - Show first name, last name, a star icon, and an avatar image as a list on as part of the MainActivity.
  * - When clicking on an item, all information is displayed on DetailActivity with the ability to edit the first name, last name, age, and phone number
  * - In addition, create a "Like" button on the detail page - this should change the drawable image from one to the other on the main list.
  * - "Prettify" the layouts so it is user friendly but leave the functionality untouched.
