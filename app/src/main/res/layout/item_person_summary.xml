@@ -20,8 +20,7 @@
             android:layout_width="@dimen/avatar_size"
             android:layout_height="@dimen/avatar_size"
             android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/tiny_margin"
-            tools:src="@drawable/ic_action_account_circle_40" />
+            android:layout_marginLeft="@dimen/tiny_margin"/>
 
         <TextView
             android:id="@+id/name"

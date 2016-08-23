@@ -5,66 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/detail_background_height"
-        android:background="@color/avatar_background_gray" />
 
     <ImageView
         android:id="@+id/ivAvatar"
         android:layout_width="@dimen/image_dimen"
         android:layout_height="@dimen/image_dimen"
-        android:layout_marginTop="@dimen/avatar_margin_top"
         android:layout_marginLeft="@dimen/large_margin"
         tools:ignore="RtlHardcoded" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@+id/ivAvatar"
-        android:layout_marginLeft="@dimen/large_margin"
-        android:layout_marginTop="@dimen/normal_margin">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/firstname_text_height"
-            android:textStyle="bold"
-            android:gravity="center_vertical"
-            android:text="@string/name_label"/>
-
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/firstname_text_height"
-            tools:text="John Williams"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/firstname_text_height"
-            android:textStyle="bold"
-            android:gravity="center_vertical"
-            android:text="@string/age_label"/>
-
-        <TextView
-            android:id="@+id/tvAge"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/age_text_height"
-            tools:text="18"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/firstname_text_height"
-            android:textStyle="bold"
-            android:gravity="center_vertical"
-            android:text="@string/phone_label"/>
-
-        <TextView
-            android:id="@+id/tvPhoneNum"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/phonenum_text_height"
-            tools:text="999-999-9999"/>
-    </LinearLayout>
 
     <Button
         android:id="@+id/btnLike"
@@ -73,7 +21,6 @@
         android:gravity="center"
         android:layout_marginTop="@dimen/tiny_margin"
         android:layout_marginRight="@dimen/small_margin"
-        android:layout_alignTop="@+id/ivAvatar"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:elevation="@dimen/normal_elevation"
