@@ -9,7 +9,8 @@ import android.support.v7.app.AppCompatActivity;
  * It should query this server and retrieve and populate data
  *
  */
-public class APIActivity extends AppCompatActivity{
+public class APIActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

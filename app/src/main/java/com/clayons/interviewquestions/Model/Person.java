@@ -4,9 +4,10 @@ package com.clayons.interviewquestions.Model;
  * Created by jaychung on 11/16/15.
  */
 public class Person {
+
     private String firstName;
     private String lastName;
-    private Integer age;
+    private int age;
     private String phoneNum;
     private String photoUrl;
     private boolean isLiked;
@@ -20,7 +21,4 @@ public class Person {
         this.isLiked = isLiked;
     }
 
-    public Person() {
-
-    }
 }
