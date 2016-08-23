@@ -18,7 +18,8 @@ import java.util.List;
  * - Show name, a heart icon, and an avatar image as a list on as part of the MainActivity.
  * - When clicking on an item, all information is displayed on DetailActivity with the ability favorite an item
  * - In addition, create a "Favorite" button on the detail page - this should change the drawable image from one to the other on the main list.
- * - "Prettify" the layouts so it is user friendly but leave the functionality untouched.
+ *
+ * - There are screen shots for how the layouts are supposed to look in the root directory.
  *
  *
  * Part II. show a list of items as a GET API Request to server using any kind of framework you know.
