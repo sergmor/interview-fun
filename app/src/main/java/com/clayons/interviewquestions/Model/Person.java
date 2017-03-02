@@ -1,9 +1,12 @@
 package com.clayons.interviewquestions.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by jaychung on 11/16/15.
  */
-public class Person {
+public class Person implements Serializable {
+    static final long serialVersionUID = 1;
 
     private String firstName;
     private String lastName;
@@ -11,6 +14,54 @@ public class Person {
     private String phoneNum;
     private String photoUrl;
     private boolean isLiked;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getPhoneNum() {
+        return phoneNum;
+    }
+
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
+    }
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
+
+    public boolean isLiked() {
+        return isLiked;
+    }
+
+    public void setLiked(boolean liked) {
+        isLiked = liked;
+    }
 
     public Person(String firstName, String lastName, Integer age, String phoneNum, String photoUrl, boolean isLiked) {
         this.firstName = firstName;
