@@ -2,11 +2,11 @@ package com.clayons.interviewquestions;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.clayons.interviewquestions.Model.Person;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.clayons.interviewquestions.Ui.MainPresenter;
 
 /**
  *
@@ -41,23 +41,27 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    RecyclerView peopleReclyclerView;
+    MainPresenter mainPresenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+        peopleReclyclerView = (RecyclerView) findViewById(R.id.people_list);
+        peopleReclyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mainPresenter = new MainPresenter(this);
+
+
     }
 
-    public void initPerson() {
-        final List<Person> persons = new ArrayList<>();
-        persons.add(new Person("Shubhanshu", "Yadav", 5, "111-222-3337", "http://www.max2.com/img/SHUBHANSHU.png", false));
-        persons.add(new Person("Atesh", "Yurdakul", 5, "111-222-3337", "http://www.max2.com/img/ATESH.png", false));
-        persons.add(new Person("Daniel", "Yurdakul", 5, "111-222-3337", "http://www.max2.com/img/DANIEL.png", false));
-        persons.add(new Person("Pranav", "Bhalla", 5, "111-222-3337", "http://www.max2.com/img/PRANAV.png", false));
-        persons.add(new Person("Rohan", "Nagrani", 20, "111-222-3333", "http://www.max2.com/img/ROHAN.png", false));
-        persons.add(new Person("Michael", "Salmasi", 30, "111-222-3334", "http://www.max2.com/img/MICHAEL.png", false));
-        persons.add(new Person("Josh", "Williams", 24, "111-222-3335", "http://www.max2.com/img/josh.png", false));
-        persons.add(new Person("Jing", "Guo", 15, "111-222-3336", "http://www.max2.com/img/jing.png", false));
-        persons.add(new Person("Zhenyu", "Wen", 5, "111-222-3337", "http://www.max2.com/img/zhenyu.png", false));
+    public void adapterReady(MainPresenter.PersonAdapter personAdapter){
+        peopleReclyclerView.setAdapter(personAdapter);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mainPresenter.onDestroy();
+    }
 }

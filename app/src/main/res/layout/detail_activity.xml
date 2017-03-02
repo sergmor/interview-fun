@@ -5,12 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/avatar_background_gray"/>
 
     <ImageView
         android:id="@+id/ivAvatar"
         android:layout_width="@dimen/image_dimen"
         android:layout_height="@dimen/image_dimen"
         android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginTop="@dimen/avatar_margin_top"
         tools:ignore="RtlHardcoded" />
 
 
@@ -19,11 +24,64 @@
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="@dimen/tiny_margin"
+        android:layout_marginTop="@dimen/avatar_margin_top"
         android:layout_marginRight="@dimen/small_margin"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:elevation="@dimen/normal_elevation"
         tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/tvNameLabel"
+        android:text="@string/name_label"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/label_margin_top"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_below="@id/ivAvatar"
+        />
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNameLabel"
+
+        />
+
+    <TextView
+        android:id="@+id/tvAgeLabel"
+        android:text="@string/age_label"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/label_margin_top"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_below="@id/tvName"/>
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_below="@id/tvAgeLabel"
+        />
+
+    <TextView
+        android:id="@+id/tvPhoneLabel"
+        android:text="@string/phone_label"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/label_margin_top"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_below="@id/tvAge"/>
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_below="@+id/tvPhoneLabel"
+        />
 
 </RelativeLayout>

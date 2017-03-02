@@ -13,8 +13,10 @@
     <dimen name="small_corner_radius">4dp</dimen>
     <dimen name="tiny_margin">4dp</dimen>
     <dimen name="normal_elevation">8dp</dimen>
+    <dimen name="label_margin_top">30dp</dimen>
     <dimen name="large_margin">20dp</dimen>
     <dimen name="avatar_margin_top">90dp</dimen>
+    <dimen name="header_height">110dp</dimen>
     <dimen name="detail_background_height">120dp</dimen>
     <dimen name="button_width">100dp</dimen>
 </resources>

@@ -6,4 +6,5 @@
     <string name="age_label">Age</string>
     <string name="phone_label">Phone</string>
     <string name="persons_label">Persons</string>
+    <string name="error_showing_details">There was a problem showing details</string>
 </resources>
