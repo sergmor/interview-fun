@@ -2,6 +2,8 @@ package com.clayons.interviewquestions;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.clayons.interviewquestions.Model.Person;
 
@@ -41,13 +43,24 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private RecyclerView recycle;
+    private PersonAdapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+        initPerson();
     }
 
     public void initPerson() {
+        recycle = (RecyclerView) findViewById(R.id.messages_list);
+        recycle.setHasFixedSize(true); //currently size is fixed, so this improves performance
+
+        mLayoutManager = new LinearLayoutManager(this);
+        recycle.setLayoutManager(mLayoutManager);
+
         final List<Person> persons = new ArrayList<>();
         persons.add(new Person("Shubhanshu", "Yadav", 5, "111-222-3337", "http://www.max2.com/img/SHUBHANSHU.png", false));
         persons.add(new Person("Atesh", "Yurdakul", 5, "111-222-3337", "http://www.max2.com/img/ATESH.png", false));
@@ -58,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         persons.add(new Person("Josh", "Williams", 24, "111-222-3335", "http://www.max2.com/img/josh.png", false));
         persons.add(new Person("Jing", "Guo", 15, "111-222-3336", "http://www.max2.com/img/jing.png", false));
         persons.add(new Person("Zhenyu", "Wen", 5, "111-222-3337", "http://www.max2.com/img/zhenyu.png", false));
+
+        mAdapter = new PersonAdapter(persons);
+        recycle.setAdapter(mAdapter);
+
+        mLayoutManager = new LinearLayoutManager(this);
+        recycle.setLayoutManager(mLayoutManager);
     }
 
 }

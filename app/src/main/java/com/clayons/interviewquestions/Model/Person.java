@@ -21,4 +21,24 @@ public class Person {
         this.isLiked = isLiked;
     }
 
+    public String getName() {
+        //do better check if needed
+        if (firstName != null && lastName != null)
+            return firstName + " " + lastName;
+        return "";// no null pointers here
+    }
+
+    public String getPhoto() {
+        if (photoUrl != null)
+            return photoUrl;
+        return "";
+    }
+
+    public boolean getIsLiked() {
+        return isLiked;
+    }
+
+    public void setIsLiked(boolean amILiked) {
+        this.isLiked = amILiked;
+    }
 }
